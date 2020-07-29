@@ -1,0 +1,161 @@
+$primary-color: #EB594C;
+$dark-color: #334429;
+$light-color: #F1E5E0;
+$font-stack: 'Raleway', sans-serif;
+*{
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    font-family: $font-stack;
+    overflow-x: hidden;
+    background-color: $light-color;
+    text-align: center;
+}
+
+.btn{
+    margin: 30px auto;
+    width: 15%;
+    padding: 19px;
+    background-color: $primary-color;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    transition: all 0.2s linear;
+    font-family: $font-stack;
+    font-size: 17px;
+
+    &:hover{
+        opacity: 0.9;
+    }
+
+    &:focus{
+        outline: none;
+    }
+
+    &:active{
+        transform: scale(0.95);
+    }
+}
+
+.filter-container{
+    width: 40%;
+    margin: 10px auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 10px;
+
+    span{
+        width: 30%;
+        background-color: lighten($color: $primary-color, $amount: 35%);
+        border-radius: 50px;
+        padding: 15px;
+        font-size: 14px;
+        font-weight: 400;
+        margin: 0 10px;
+        cursor: pointer;
+        border: 1px solid $light-color;
+
+        &.active{
+            background-color: $primary-color;
+            color: #fff;
+            border: none;
+        }
+
+    }
+}
+
+.meal-container{
+    margin: 10px auto;
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0 20px;
+    .card{
+        width: 45%;
+        background-color: #fff;
+        border-radius: 5px;
+        padding: 25px 15px 15px 15px;
+        display: flex;
+        flex-wrap: wrap;
+        min-height: 260px;
+        margin: 15px;
+
+        .card-info{
+            text-align: left;
+            width: 45%;
+            padding-left: 10px;
+        }
+
+        h1{
+            font-size: 17px;
+        }
+
+        img{
+            height: 100%;
+            width: 50%;
+            border-radius: 5px;
+        }
+
+        .star-container{
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+            margin-top: 10px;
+
+            i{
+                color: $light-color;
+                margin-right: 2px;
+
+                &.on{
+                    color: $primary-color;
+                }
+            }
+        }
+    }
+}
+
+
+@media only screen and(max-width: 1000px) {
+    .btn{
+        width: 40%;
+    }
+
+    .filter-container{
+        width: 80%;
+    }
+
+    .meal-container{
+        width: 90%;
+        margin: 20px auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .card{
+            width: 100%;
+            margin: 10px auto;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+
+            img{
+                height: 100%;
+            }
+        }
+    }
+}

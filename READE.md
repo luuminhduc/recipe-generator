@@ -1,0 +1,1 @@
+You can generate random recipes from the api 'api.spoonacular.com', filter them. Each recipe will have the stars given to them arcording to the point. It is also responsive.
